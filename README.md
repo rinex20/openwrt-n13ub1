@@ -22,8 +22,8 @@ wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
 6.使用计划任务自动更新CHNROUTE（IGNORE.LIST）文件
 新建一个文件 /root/update_ignore_list 写入如下内容
 
-#!/bin/sh
 
+#!/bin/sh
 set -e -o pipefail
 
 wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
