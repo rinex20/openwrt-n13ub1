@@ -1,0 +1,25 @@
+OpenWRT 自动翻墙路由器 DNS 解析的改善
+
+在这里要感谢一下dnsmasq-chinalist的作者！Github页面：
+
+https://github.com/felixonmars/dnsmasq-china-list
+
+该方法利用dnsmasq对上述情况进行区分。
+
+修改 /etc/dnsmasq.conf  ，去除你之前自定义的规则，在最后加入  conf-dir=/etc/dnsmasq.d ，新建并进入目录  /etc/dnsmasq.d ，下载 accelerated-domains.china.conf 和 foreign_list.conf 两个文件后复制两个文件到  /etc/dnsmasq.d 目录。
+
+PS：两个文件都会有更新，建议隔段时间更新一下。
+
+分别修改两个文件，利用批量替换功能修改：
+
+将 accelerated-domains.china.conf （ChinaList）文件中所有的的114.114.114.114修改为自己ISP的DNS或者其他效果更好的国内DNS的IP地址（也可以保留114DNS），格式为：
+
+server=/0-6.com/IP
+
+将 foreign_list.conf （GFWList）文件中所有的 127.0.0.1#5300 修改为自己所用国外DNS，格式为：
+
+server=/.lsxszzg.com/IP#PORT
+
+如果你使用shadowsocks的UDP转发来提供国外DNS解析，UDP转发的端口号为5300，那么就是默认的 127.0.0.1#5300 ，如果你使用一个非标端口的国外DNS服务，如3.4.5.6，端口5353，那么就改为 3.4.5.6#5353 。注意不要使用国外公共DNS，因为会被污染！
+
+接着，确保luci中的配置填写的是ChinaDNS的地址：
