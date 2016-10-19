@@ -23,22 +23,7 @@ wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
 新建一个文件 /root/update_ignore_list 写入如下内容
 
 
-#!/bin/sh
-set -e -o pipefail
 
-wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
-    awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > \
-    /tmp/ignore.list
-
-mv /tmp/ignore.list /etc/
-
-if pidof ss-redir>/dev/null; then
-    /etc/init.d/shadowsocks restart
-fi
-
-使用 chmod +x /root/update_ignore_list 添加可执行权限；
-增加计划执行：
-30    4     *     *     *     /root/update_ignore_list>/dev/null 2>&1
 
 
 
