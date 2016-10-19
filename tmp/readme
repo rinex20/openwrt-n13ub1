@@ -1,1 +1,13 @@
+安装的必要包
+opkg update
 
+opkg install ip ipset libopenssl iptables-mod-tproxy
+
+opkg install kmod-nfnetlink kmod-ipt-ipset kmod-ipt-tproxy libmnl libpthread
+
+然后
+cd /tmp
+opkg install shadowsocks-libev-spec_x.x.x-x_ar71xx.ipk
+opkg install ChinaDNS_x.x.x-x_ar71xx.ipk
+opkg install luci-app-chinadns_x.x.x-x_all.ipk
+opkg install luci-app-shadowsocks-spec_x.x.x-x_all.ipk
