@@ -14,13 +14,15 @@ wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
 
 3.设置本地解析的地址为普通dns，做好是当地ISP的dns
 
-4.注意取消“忽略解析文件”的勾选
+4.注意取消“忽略解析文件”的勾选，解析文件为/tmp/resolv.conf.auto
 
 5.设置dnsmasq的conf文件，增加一个dnsmasq.d的目录，把加速的和特别的域名解析，指定特别的解析地址
 可参考这个文件  https://github.com/cokebar/gfwlist2dnsmasq
 
 6.使用计划任务自动更新CHNROUTE（IGNORE.LIST）文件
 新建一个文件 /root/update_ignore_list 写入如下内容
+
+注意设置wan的接口的高级设置，取消使用xx的dns服务，自定义dns服务为127.0.0.1
 
 
 
