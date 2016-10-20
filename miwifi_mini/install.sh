@@ -35,7 +35,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n1
 #download china_ip_list and save to /etc/chinadns_chnroute.txt
 cd /etc
 rm -f chinadns_chnroute.txt
-wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > /etc/chinadns_chnroute.list
+wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > /etc/chinadns_chnroute.txt
 
 #add update scheduled task
 cd /root
