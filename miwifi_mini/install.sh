@@ -8,7 +8,7 @@ echo "#############################################################"
 opkg update
 
 #Extra package
-opkg install iptables-mod-nat-extra ipset libopenssl
+opkg install iptables-mod-nat-extra ip ipset libopenssl
 
 #Extra package 2
 opkg install kmod-nfnetlink kmod-ipt-ipset kmod-ipt-tproxy libmnl libpthread
@@ -19,7 +19,11 @@ wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n1
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/tmp/luci-app-shadowsocks_1.3.6-1_all.ipk
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/tmp/luci-app-chinadns_1.6.0-1_all.ipk
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/tmp/ChinaDNS_1.3.2-4_ramips_24kec.ipk
-wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/tmp/luci-app-chinadns_1.6.0-1_all.ipk
+
+opkg install shadowsocks-libev_2.5.5-1_ramips_24kec.ipk
+opkg install ChinaDNS_1.3.2-4_ramips_24kec.ipk
+opkg install luci-app-shadowsocks_1.3.6-1_all.ipk
+opkg install luci-app-chinadns_1.6.0-1_all.ipk 
 
 #mkdir dnsmasq for gfwlist domains
 cd /etc
