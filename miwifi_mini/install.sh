@@ -16,6 +16,8 @@ opkg install kmod-nfnetlink kmod-ipt-ipset kmod-ipt-tproxy libmnl libpthread
 #remove dnsmasq-lite-version and install full version
 opkg remove dnsmasq && opkg install dnsmasq-full
 
+opkg install iptables-mod-tproxy
+
 #download shadowsocks-libev && chinadns
 cd /tmp
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/tmp/shadowsocks-libev_2.5.5-1_ramips_24kec.ipk
