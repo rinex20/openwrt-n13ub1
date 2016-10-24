@@ -2,7 +2,12 @@ openwrt-n13ub1
 
 updated:2016-10-19 12:25
 
+
+https://bintray.com/aa65535
+
 https://dl.bintray.com/aa65535/opkg/shadowsocks-libev/2.5.3/ramips/
+
+https://cokebar.info/archives/962
 
 采用ss+gfwlist方式freeinternet
 
