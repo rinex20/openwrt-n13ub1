@@ -37,6 +37,8 @@ cd /etc
 mkdir dnsmasq.d
 cd dnsmasq.d
 
+echo "conf-dir=/etc/dnsmasq.d/" > /etc/dnsmasq.conf
+
 #download gfwlist domains
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/etc/dnsmasq.d/accelerated-domains.china.conf
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/etc/dnsmasq.d/bogus-nxdomains-china.conf
