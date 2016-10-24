@@ -42,6 +42,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n1
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/etc/dnsmasq.d/bogus-nxdomains-china.conf
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/etc/dnsmasq.d/foreign_list.conf
 wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/etc/dnsmasq.d/google.china.conf
+wget --no-check-certificate https://raw.githubusercontent.com/rinex20/openwrt-n13ub1/master/etc/dnsmasq.d/dnsmasq_list.conf
 
 #download china_ip_list and save to /etc/chinadns_chnroute.txt
 cd /etc
