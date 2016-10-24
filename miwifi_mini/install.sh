@@ -16,7 +16,7 @@ opkg install kmod-nfnetlink kmod-ipt-ipset kmod-ipt-tproxy libmnl libpthread
 #remove dnsmasq-lite-version and install full version
 opkg remove dnsmasq && opkg install dnsmasq-full
 
-opkg install iptables-mod-tproxy
+opkg install iptables-mod-tproxy libpcre
 
 #download shadowsocks-libev && chinadns
 cd /tmp
