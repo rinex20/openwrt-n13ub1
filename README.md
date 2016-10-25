@@ -32,6 +32,11 @@ wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
 
 
 
+国内源——中科大
+https://openwrt.proxy.ustclug.org/
+
+
+
 
 
 
