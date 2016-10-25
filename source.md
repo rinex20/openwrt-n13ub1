@@ -1,4 +1,5 @@
 中科大源
+
 src/gz chaos_calmer_base http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ramips/mt7620/packages/base
 src/gz chaos_calmer_luci http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ramips/mt7620/packages/luci
 src/gz chaos_calmer_packages http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ramips/mt7620/packages/packages
