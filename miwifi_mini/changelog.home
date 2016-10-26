@@ -1,0 +1,6 @@
+2016-10-26 
+add gfw support
+(https://github.com/shadowsocks/luci-app-shadowsocks/wiki/GfwList-Support)
+add dnsmasq restart code into /etc/init.d/shadowsocks (function start)
+
+
