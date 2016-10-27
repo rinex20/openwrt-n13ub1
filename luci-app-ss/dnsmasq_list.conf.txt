@@ -1,6 +1,6 @@
 # gfw list ipset rules for dnsmasq
 # updated on 2016-10-19 20:43:26
-#
+# add support for luci-app-shadowsocks access control
 server=/.4tern.com/127.0.0.1#5300
 ipset=/.4tern.com/ss_spec_dst_fw
 server=/.adorama.com/127.0.0.1#5300
