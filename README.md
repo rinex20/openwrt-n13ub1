@@ -30,7 +30,7 @@ wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
 
 注意设置wan的接口的高级设置，取消使用xx的dns服务，自定义dns服务为127.0.0.1
 
-
+每次重启 shadowsocks 后 ss_spec_dst_fw 都会被销毁重建, 所以您需要在每次重启 shadowsocks 后重启 Dnsmasq 以及将下游设备的 DNS 缓存清空, 使 Dnsmasq 可以重新将查询结果保存到 ss_spec_dst_fw 中.
 
 国内源——中科大
 https://openwrt.proxy.ustclug.org/
